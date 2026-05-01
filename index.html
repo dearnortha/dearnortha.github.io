@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dear Northa | Hypnotherapy & Mental Wellness</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ :root {
+ --blush: #f5d6cc;
+ --rose: #e8a598;
+ --deep: #c47b6e;
+ --cream: #fdf6f0;
+ --brown: #5c3d35;
+ --soft: #f9ede8;
+ --white: #ffffff;
+ }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: ‘DM Sans’, sans-serif;
+background: var(–cream);
+color: var(–brown);
+min-height: 100vh;
+}
+
+/* Animated background */
+body::before {
+content: ‘’;
+position: fixed;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(ellipse at 20% 20%, #f5d6cc44 0%, transparent 50%),
+radial-gradient(ellipse at 80% 80%, #e8a59833 0%, transparent 50%),
+radial-gradient(ellipse at 50% 50%, #fdf6f0 0%, transparent 70%);
+z-index: -1;
+animation: bgFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes bgFloat {
+0% { transform: translate(0, 0) rotate(0deg); }
+100% { transform: translate(2%, 2%) rotate(1deg); }
+}
+
+.container {
+max-width: 520px;
+margin: 0 auto;
+padding: 0 20px 60px;
+}
+
+/* Header */
+.header {
+text-align: center;
+padding: 48px 0 32px;
+animation: fadeDown 0.8s ease both;
+}
+
+@keyframes fadeDown {
+from { opacity: 0; transform: translateY(-20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.avatar-ring {
+width: 90px;
+height: 90px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(–rose), var(–deep));
+padding: 3px;
+margin: 0 auto 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.avatar-inner {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+background: var(–cream);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 36px;
+}
+
+.handle {
+font-size: 13px;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(–deep);
+font-weight: 500;
+margin-bottom: 8px;
+}
+
+h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: 28px;
+font-weight: 700;
+color: var(–brown);
+line-height: 1.2;
+margin-bottom: 12px;
+}
+
+h1 em {
+font-style: italic;
+color: var(–deep);
+}
+
+.tagline {
+font-size: 14px;
+color: #8a6358;
+line-height: 1.6;
+max-width: 320px;
+margin: 0 auto 20px;
+}
+
+/* Badges */
+.badges {
+display: flex;
+gap: 8px;
+justify-content: center;
+flex-wrap: wrap;
+margin-bottom: 8px;
+}
+
+.badge {
+background: var(–blush);
+color: var(–brown);
+padding: 4px 12px;
+border-radius: 20px;
+font-size: 11px;
+font-weight: 500;
+letter-spacing: 0.5px;
+}
+
+/* Section title */
+.section-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 13px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–deep);
+text-align: center;
+margin: 36px 0 16px;
+}
+
+/* Cards */
+.card {
+background: var(–white);
+border-radius: 20px;
+padding: 24px;
+margin-bottom: 14px;
+border: 1px solid #f0ddd8;
+box-shadow: 0 2px 20px rgba(196, 123, 110, 0.06);
+animation: fadeUp 0.6s ease both;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 30px rgba(196, 123, 110, 0.12);
+}
+
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(16px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+
+.card-emoji { font-size: 24px; margin-bottom: 10px; }
+
+.card-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 18px;
+font-weight: 700;
+color: var(–brown);
+margin-bottom: 6px;
+}
+
+.card-desc {
+font-size: 13px;
+color: #8a6358;
+line-height: 1.6;
+margin-bottom: 14px;
+}
+
+.card-includes {
+display: flex;
+flex-direction: column;
+gap: 6px;
+margin-bottom: 16px;
+}
+
+.include-item {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 12px;
+color: var(–brown);
+}
+
+.include-dot {
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: var(–rose);
+flex-shrink: 0;
+}
+
+.card-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.price {
+font-family: ‘Playfair Display’, serif;
+font-size: 22px;
+font-weight: 700;
+color: var(–brown);
+}
+
+.price span {
+font-size: 13px;
+font-weight: 400;
+color: #8a6358;
+font-family: ‘DM Sans’, sans-serif;
+}
+
+/* CTA Button */
+.btn {
+display: inline-block;
+background: linear-gradient(135deg, var(–rose), var(–deep));
+color: white;
+padding: 10px 22px;
+border-radius: 50px;
+font-size: 13px;
+font-weight: 500;
+text-decoration: none;
+letter-spacing: 0.3px;
+transition: all 0.2s ease;
+cursor: pointer;
+border: none;
+}
+
+.btn:hover {
+transform: scale(1.04);
+box-shadow: 0 4px 16px rgba(196, 123, 110, 0.35);
+}
+
+.btn-outline {
+background: transparent;
+border: 1.5px solid var(–rose);
+color: var(–deep);
+padding: 10px 22px;
+border-radius: 50px;
+font-size: 13px;
+font-weight: 500;
+text-decoration: none;
+display: inline-block;
+transition: all 0.2s ease;
+cursor: pointer;
+}
+
+.btn-outline:hover {
+background: var(–blush);
+}
+
+/* Free call card */
+.free-card {
+background: linear-gradient(135deg, #fde8e2, #fdf0eb);
+border: 1.5px dashed var(–rose);
+border-radius: 20px;
+padding: 22px 24px;
+margin-bottom: 14px;
+text-align: center;
+animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.free-badge {
+display: inline-block;
+background: var(–deep);
+color: white;
+padding: 3px 12px;
+border-radius: 20px;
+font-size: 11px;
+font-weight: 500;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.free-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 17px;
+font-weight: 700;
+color: var(–brown);
+margin-bottom: 6px;
+}
+
+.free-desc {
+font-size: 12px;
+color: #8a6358;
+margin-bottom: 16px;
+line-height: 1.5;
+}
+
+/* Social links */
+.socials {
+display: flex;
+flex-direction: column;
+gap: 10px;
+animation: fadeUp 0.6s 0.5s ease both;
+}
+
+.social-link {
+display: flex;
+align-items: center;
+gap: 12px;
+background: var(–white);
+border: 1px solid #f0ddd8;
+border-radius: 14px;
+padding: 14px 18px;
+text-decoration: none;
+color: var(–brown);
+font-size: 14px;
+font-weight: 500;
+transition: all 0.2s ease;
+}
+
+.social-link:hover {
+background: var(–soft);
+transform: translateX(4px);
+}
+
+.social-icon {
+font-size: 20px;
+width: 32px;
+text-align: center;
+}
+
+.social-arrow {
+margin-left: auto;
+color: var(–rose);
+font-size: 16px;
+}
+
+/* Testimonial */
+.testimonial {
+background: var(–soft);
+border-left: 3px solid var(–rose);
+border-radius: 0 16px 16px 0;
+padding: 18px 20px;
+margin-bottom: 14px;
+animation: fadeUp 0.6s 0.35s ease both;
+}
+
+.testimonial-text {
+font-family: ‘Playfair Display’, serif;
+font-style: italic;
+font-size: 14px;
+color: var(–brown);
+line-height: 1.7;
+margin-bottom: 8px;
+}
+
+.testimonial-author {
+font-size: 12px;
+color: var(–deep);
+font-weight: 500;
+}
+
+/* Footer */
+.footer {
+text-align: center;
+padding: 32px 0 0;
+font-size: 12px;
+color: #b8958a;
+animation: fadeUp 0.6s 0.6s ease both;
+}
+
+.divider {
+height: 1px;
+background: linear-gradient(to right, transparent, var(–blush), transparent);
+margin: 28px 0;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+ <!-- Header -->
+
+ <div class="header">
+ <div class="avatar-ring">
+ <div class="avatar-inner"> </div>
+ </div>
+ <div class="handle">@dearnortha</div>
+ <h1>Heal. <em>Transform.</em><br>Reclaim Your Peace.</h1>
+ <p class="tagline">Hypnotherapy & Mental Wellness Coaching for those feeling lost, stuck, or emotionally exhausted.</p>
+ <div class="badges">
+ <span class="badge"> Hypnotherapy</span>
+ <span class="badge"> Online Worldwide</span>
+ <span class="badge"> Bahasa & English</span>
+ </div>
+ </div>
+
+ <!-- Free Call -->
+
+ <div class="free-card">
+ <div class="free-badge"> Free</div>
+ <div class="free-title">Start With a Free Discovery Call</div>
+ <div class="free-desc">15 minutes. No pressure. Just a conversation to see if we're the right fit for your healing journey.</div>
+ <a class="btn" href="#">Book My Free Call →</a>
+ </div>
+
+ <!-- Offers -->
+
+ <div class="section-title">Ways To Work With Me</div>
+
+ <!-- Package 1 -->
+
+ <div class="card">
+ <div class="card-emoji"> </div>
+ <div class="card-title">Deep Healing Package</div>
+ <div class="card-desc">A transformative 4-session journey using hypnotherapy & mindset coaching to help you break free from emotional blocks, anxiety, and limiting beliefs.</div>
+ <div class="card-includes">
+ <div class="include-item"><div class="include-dot"></div>4 x 60-min Zoom sessions</div>
+ <div class="include-item"><div class="include-dot"></div>Personalised hypnotherapy recordings</div>
+ <div class="include-item"><div class="include-dot"></div>WhatsApp support between sessions</div>
+ <div class="include-item"><div class="include-dot"></div>Journaling & mindset worksheets</div>
+ </div>
+ <div class="card-footer">
+ <div class="price">$197 <span>/ package</span></div>
+ <a class="btn" href="#">Book Now</a>
+ </div>
+ </div>
+
+ <!-- Package 2 -->
+
+ <div class="card">
+ <div class="card-emoji"> </div>
+ <div class="card-title">Single Session</div>
+ <div class="card-desc">One focused hypnotherapy session for a specific issue — stress, sleep, confidence, or emotional release.</div>
+ <div class="card-includes">
+ <div class="include-item"><div class="include-dot"></div>60-min 1:1 Zoom session</div>
+ <div class="include-item"><div class="include-dot"></div>Session recording sent to you</div>
+ <div class="include-item"><div class="include-dot"></div>Follow-up voice note check-in</div>
+ </div>
+ <div class="card-footer">
+ <div class="price">$65 <span>/ session</span></div>
+ <a class="btn" href="#">Book Now</a>
+ </div>
+ </div>
+
+ <!-- Testimonial -->
+
+ <div class="testimonial">
+ <div class="testimonial-text">"I was feeling so lost and stuck for months. After just 2 sessions with Northa, I felt like I could breathe again. She truly understands the mind and heart."</div>
+ <div class="testimonial-author">— Client, Indonesia </div>
+ </div>
+
+ <div class="divider"></div>
+
+ <!-- Social links -->
+
+ <div class="section-title">Find Me Here</div>
+ <div class="socials">
+ <a class="social-link" href="#">
+ <span class="social-icon"> </span>
+ Instagram @dearnortha
+ <span class="social-arrow">→</span>
+ </a>
+ <a class="social-link" href="#">
+ <span class="social-icon"> </span>
+ Book in Indonesia (Lynk.id)
+ <span class="social-arrow">→</span>
+ </a>
+ <a class="social-link" href="#">
+ <span class="social-icon"> </span>
+ Worldwide Offers (Beacon)
+ <span class="social-arrow">→</span>
+ </a>
+ </div>
+
+ <div class="footer">
+ Made with by Northa · Healing one soul at a time
+ </div>
+
+</div>
+</body>
+</html>
